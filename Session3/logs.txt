@@ -1,0 +1,232 @@
+PS E:\EAG\Session3> python -m uvicorn main:app --reload --log-level debug
+INFO:     Will watch for changes in these directories: ['E:\\EAG\\Session3']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [22200] using StatReload
+2025-03-31 00:06:04,400 - INFO - Initializing Gemini API
+2025-03-31 00:06:04,400 - INFO - Gemini API initialized successfully
+INFO:     Started server process [11272]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58023 - "OPTIONS /analyze HTTP/1.1" 200 OK
+2025-03-31 00:06:57,013 - INFO - Received analyze request for email from: Aswathi Jayaraam
+2025-03-31 00:06:57,013 - INFO - Request body: {'email': {'subject': 'Exciting Opportunity to Join Our Team at NovaAI', 'sender': 'Aswathi Jayaraam', 'content': "Hi Aswathi,\n\nI hope this message finds you well!\n\nI'm reaching out from NovaAI, a fast-growing startup in the generative AI space. We came across your profile and were really impressed with your background. We're currently looking for someone with your skillset for a full-time Product Manager role on our team.\n\nThe role is remote-first, offers competitive compensation, and the chance to work on cutting-edge AI products alongside a stellar team. We’d love to connect and tell you more about it.\n\nWould you be open to a quick chat sometime this week?\n\nBest regards,\nJohn Doe\nTalent Partner, NovaAI\njohn.doe@novaai.io\n\n\n", 'date': '2025-03-30T18:36:56.707Z'}, 'settings': {'includeGreeting': True, 'includeSignature': True, 'maxLength': 500, 'tone': 'professional'}}
+2025-03-31 00:06:57,014 - INFO - ------------------------------ Step 1 ------------------------------
+2025-03-31 00:06:57,014 - INFO - [2025-03-31 00:06:57.014] analyze_email_content:: No basic analysis provided, performing basic analysis
+2025-03-31 00:06:57,015 - INFO - [2025-03-31 00:06:57.015] perform_basic_analysis:: Starting basic analysis
+2025-03-31 00:06:58,934 - INFO - [2025-03-31 00:06:58.934] perform_basic_analysis:: Received LLM response
+2025-03-31 00:06:58,936 - INFO - analyze_email_content: LLM context: 
+
+
+    Analyze this email and provide:
+    1. Sentiment (positive, negative, neutral)
+    2. Purpose (e.g., inquiry, complaint, request, update)
+    3. Context (e.g., business, personal, academic)
+    4. Key points (list of main topics)
+
+    Email:
+    From: Aswathi Jayaraam
+    Subject: Exciting Opportunity to Join Our Team at NovaAI
+    Date: 2025-03-30T18:36:56.707Z
+    Content: Hi Aswathi,
+
+I hope this message finds you well!
+
+I'm reaching out from NovaAI, a fast-growing startup in the generative AI space. We came across your profile and were really impressed with your background. We're currently looking for someone with your skillset for a full-time Product Manager role on our team.
+
+The role is remote-first, offers competitive compensation, and the chance to work on cutting-edge AI products alongside a stellar team. We’d love to connect and tell you more about it.
+
+Would you be open to a quick chat sometime this week?
+
+Best regards,
+John Doe
+Talent Partner, NovaAI
+john.doe@novaai.io
+
+
+
+
+2025-03-31 00:06:58,947 - INFO - analyze_email_content: LLM response:
+
+Okay, here's the analysis of the email:
+
+**1. Sentiment:** Positive
+
+**2. Purpose:** Recruitment/Job Opportunity
+
+**3. Context:** Business/Professional (Recruiting)
+
+**4. Key Points:**
+
+*   **Introduction and Greeting:** Opening with a positive note about the recipient's well-being.
+*   **Company Introduction:** Introduction of NovaAI as a fast-growing generative AI startup.
+*   **Recruitment Rationale:** Stating they found the recipient's profile impressive and are looking for someone with their skillset.
+*   **Job Role:** Specifically mentioning the Product Manager role.
+*   **Job Benefits:** Highlighting aspects like remote-first environment, competitive compensation, and working on cutting-edge projects with a strong team.
+*   **Call to Action:** Suggesting a brief chat to discuss the opportunity further.
+*   **Contact Information:** Providing contact information for further communication.
+
+2025-03-31 00:06:58,954 - INFO - ------------------------------ End of Step 1 ------------------------------
+2025-03-31 00:06:58,955 - INFO - ------------------------------ Step 2 ------------------------------
+2025-03-31 00:06:58,955 - INFO - [2025-03-31 00:06:58.955] analyze_email_content:: Performing deep analysis
+2025-03-31 00:06:58,955 - INFO - [2025-03-31 00:06:58.955] perform_deep_analysis:: Starting deep analysis
+2025-03-31 00:07:02,726 - INFO - [2025-03-31 00:07:02.726] perform_deep_analysis:: Received LLM response
+2025-03-31 00:07:02,728 - INFO - analyze_email_content: LLM context: 
+
+
+    Based on this initial analysis:
+    Okay, here's the analysis of the email:
+
+**1. Sentiment:** Positive
+
+**2. Purpose:** Recruitment/Job Opportunity
+
+**3. Context:** Business/Professional (Recruiting)
+
+**4. Key Points:**
+
+*   **Introduction and Greeting:** Opening with a positive note about the recipient's well-being.
+*   **Company Introduction:** Introduction of NovaAI as a fast-growing generative AI startup.
+*   **Recruitment Rationale:** Stating they found the recipient's profile impressive and are looking for someone with their skillset.
+*   **Job Role:** Specifically mentioning the Product Manager role.
+*   **Job Benefits:** Highlighting aspects like remote-first environment, competitive compensation, and working on cutting-edge projects with a strong team.
+*   **Call to Action:** Suggesting a brief chat to discuss the opportunity further.
+*   **Contact Information:** Providing contact information for further communication.
+
+
+    Provide a deeper analysis of:
+    1. Tone (formal, casual, urgent, etc.)
+    2. Urgency level (high, medium, low)
+    3. Suggested response style (formal, friendly, empathetic, etc.)
+
+    Original email:
+    From: Aswathi Jayaraam
+    Subject: Exciting Opportunity to Join Our Team at NovaAI
+    Content: Hi Aswathi,
+
+I hope this message finds you well!
+
+I'm reaching out from NovaAI, a fast-growing startup in the generative AI space. We came across your profile and were really impressed with your background. We're currently looking for someone with your skillset for a full-time Product Manager role on our team.
+
+The role is remote-first, offers competitive compensation, and the chance to work on cutting-edge AI products alongside a stellar team. We’d love to connect and tell you more about it.
+
+Would you be open to a quick chat sometime this week?
+
+Best regards,
+John Doe
+Talent Partner, NovaAI
+john.doe@novaai.io
+
+
+
+
+2025-03-31 00:07:02,736 - INFO - analyze_email_content: LLM response:
+
+Okay, here's a deeper analysis of the email, focusing on Tone, Urgency, and Suggested Response Style:
+
+**1. Tone:**
+
+*   **Primarily Professional and Friendly:** The tone strikes a good balance between professional courtesy and approachability. Phrases like "I hope this message finds you well!" and "We'd love to connect" contribute to the friendly aspect.
+*   **Enthusiastic:** The use of words like "Exciting Opportunity" and "really impressed" injects enthusiasm into the message without being overly pushy.
+*   **Confident:** The description of NovaAI as a "fast-growing startup" and the promise of working on "cutting-edge AI products alongside a stellar team" conveys confidence in the company and the opportunity.
+*   **Not overly formal:** The use of "Hi [Name]" rather than a more formal greeting like "Dear Ms./Mr. [Name]" makes it slightly more casual.
+
+**2. Urgency Level:**
+
+*   **Low to Medium:** The email doesn't create a sense of intense pressure or time sensitivity. The call to action "Would you 
+be open to a quick chat sometime this week?" suggests flexibility and doesn't imply immediate action is required. The lack of specific deadlines or consequences for not responding supports a lower urgency level. While the mention of "full-time" suggests 
+they're actively filling the position, it doesn't imply a critical shortage requiring immediate attention.
+
+**3. Suggested Response Style:**
+
+*   **Professional and Enthusiastic:** Mirror the email's tone by responding in a professional manner, but also demonstrate enthusiasm about the opportunity.
+*   **Appreciative:** Express gratitude for the recruiter reaching out and for the compliment on your profile. Acknowledge their interest.
+*   **Informative (but not overly detailed):** Briefly acknowledge your interest in the Product Manager role and your background. You don't need to provide your full resume at this stage.
+*   **Responsive:** Directly address the request for a chat. State your availability or suggest alternative times if the proposed timeframe doesn't work.
+*   **Polite and Respectful:** End with a polite closing, thanking the recruiter for their time and consideration.
+
+**Example Response:**
+
+Subject: Re: Exciting Opportunity to Join Our Team at NovaAI
+
+Hi John,
+
+Thank you so much for reaching out and for your kind words about my profile. I appreciate you thinking of me for the Product Manager role at NovaAI.
+
+I'm very interested in learning more about the opportunity and NovaAI's work in the generative AI space.
+
+I'm available for a quick chat on [Suggest a specific day/time] or [Suggest another day/time]. Please let me know if either of 
+those work for you.
+
+Thank you again for your time and consideration. I look forward to hearing from you.
+
+Best regards,
+
+[Your Name]
+
+2025-03-31 00:07:02,741 - INFO - ------------------------------ End of Step 2 ------------------------------
+2025-03-31 00:07:02,741 - INFO - ------------------------------ Step 3 ------------------------------
+2025-03-31 00:07:02,742 - INFO - [2025-03-31 00:07:02.741] analyze_email_content:: Parsing analysis results
+2025-03-31 00:07:02,742 - INFO - analyze_email_content: Structured final output:
+
+{'sentiment': '** Positive', 'purpose': '** Recruitment/Job Opportunity', 'context': '** Business/Professional (Recruiting)', 'keyPoints': ['**'], 'tone': "** Mirror the email's tone by responding in a professional manner, but also demonstrate enthusiasm about the opportunity.", 'urgency': '** The email doesn\'t create a sense of intense pressure or time sensitivity. The call to action "Would you be open to a quick chat sometime this week?" suggests flexibility and doesn\'t imply immediate action is required. The lack of specific deadlines or consequences for not responding supports a lower urgency level. While the mention of "full-time" suggests they\'re actively filling the position, it doesn\'t imply a critical shortage requiring immediate attention.', 'suggestedResponseStyle': '**'}
+2025-03-31 00:07:02,744 - INFO - ------------------------------ End of Step 3 ------------------------------
+2025-03-31 00:07:02,745 - INFO - Email analysis completed successfully
+INFO:     127.0.0.1:58023 - "POST /analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58023 - "OPTIONS /generate-response HTTP/1.1" 200 OK
+2025-03-31 00:07:02,753 - INFO - Received generate-response request
+2025-03-31 00:07:02,754 - INFO - Request body: {'analysis': {'sentiment': '** Positive', 'purpose': '** Recruitment/Job Opportunity', 'context': '** Business/Professional (Recruiting)', 'keyPoints': ['**'], 'tone': "** Mirror the email's tone by responding in a professional manner, but also demonstrate enthusiasm about the opportunity.", 'urgency': '** The email doesn\'t create 
+a sense of intense pressure or time sensitivity. The call to action "Would you be open to a quick chat sometime this week?" suggests flexibility and doesn\'t imply immediate action is required. The lack of specific deadlines or consequences for not responding supports a lower urgency level. While the mention of "full-time" suggests they\'re actively filling the position, it doesn\'t imply a critical shortage requiring immediate attention.', 'suggestedResponseStyle': '**', 'logs': [{'timestamp': '2025-03-31 00:06:57.014', 'step': 'analyze_email_content:', 'details': 'No basic analysis provided, performing basic analysis'}, {'timestamp': '2025-03-31 00:06:57.015', 'step': 'perform_basic_analysis:', 'details': 'Starting basic analysis'}, {'timestamp': '2025-03-31 00:06:58.934', 'step': 'perform_basic_analysis:', 'details': 'Received LLM response'}, {'timestamp': '2025-03-31 00:06:58.955', 'step': 'analyze_email_content:', 'details': 'Performing deep analysis'}, {'timestamp': '2025-03-31 00:06:58.955', 'step': 'perform_deep_analysis:', 'details': 'Starting deep analysis'}, {'timestamp': '2025-03-31 00:07:02.726', 'step': 'perform_deep_analysis:', 'details': 'Received LLM response'}, {'timestamp': '2025-03-31 00:07:02.741', 'step': 'analyze_email_content:', 'details': 'Parsing analysis results'}]}, 'settings': {'includeGreeting': True, 'includeSignature': True, 'maxLength': 500, 
+'tone': 'professional'}}
+2025-03-31 00:07:02,757 - INFO - [2025-03-31 00:07:02.757] generate_email_response:: Starting response generation
+2025-03-31 00:07:02,757 - INFO - ------------------------------ Final Step ------------------------------
+2025-03-31 00:07:02,757 - INFO - [2025-03-31 00:07:02.757] generate_email_response:: Created prompt
+2025-03-31 00:07:04,130 - INFO - generate_email_response: prompt: 
+
+
+        Generate a professional email response based on this analysis:
+        Sentiment: ** Positive
+        Purpose: ** Recruitment/Job Opportunity
+        Context: ** Business/Professional (Recruiting)
+        Key Points: **
+        Tone: ** Mirror the email's tone by responding in a professional manner, but also demonstrate enthusiasm about the opportunity.
+        Urgency: ** The email doesn't create a sense of intense pressure or time sensitivity. The call to action "Would you be 
+open to a quick chat sometime this week?" suggests flexibility and doesn't imply immediate action is required. The lack of specific deadlines or consequences for not responding supports a lower urgency level. While the mention of "full-time" suggests they're actively filling the position, it doesn't imply a critical shortage requiring immediate attention.
+        Suggested Style: **
+
+        Generate a response that:
+        1. Uses appropriate greeting based on the context and tone
+        2. Addresses all key points from the original email
+        3. Matches the original email's tone and formality level
+        4. Includes natural transitions between points
+        5. Ends with an appropriate closing statement
+
+        response format:
+        - String that only has the following contents:
+        Subject: [Subject line for the response]
+        Body: [Body of the response]
+
+2025-03-31 00:07:04,134 - INFO - 
+generate_email_response: Received LLM response
+
+2025-03-31 00:07:04,134 - INFO - generate_email_response: Response:
+
+```
+Subject: Re: Exciting Opportunity at [Company Name]
+
+Body: Dear [Sender Name],
+
+Thank you so much for reaching out and sharing this exciting opportunity at [Company Name]. I truly appreciate you thinking of me.
+
+I was very interested to learn more about the [Job Title] role and the potential for growth within [Team/Department]. The responsibilities you outlined align well with my skills and experience, particularly [mention a specific skill or experience that aligns].
+
+I'd be delighted to discuss this further with you. I am indeed open to a quick chat sometime this week and am happy to work around your availability. Please let me know what time works 
+best for you.
+
+Thank you again for your consideration. I look forward to connecting soon.
+
+Sincerely,
+
+[Your Name]
+```
+2025-03-31 00:07:04,137 - INFO - ------------------------------ End of Final Step ------------------------------
+2025-03-31 00:07:04,137 - INFO - Response generated successfully

@@ -1,0 +1,1352 @@
+2025-04-06 22:10:21,863 - DEBUG - Using proactor: IocpProactor
+2025-04-06 22:10:21,865 - INFO - Starting main execution...
+2025-04-06 22:10:21,865 - INFO - Establishing connection to MCP server...
+2025-04-06 22:10:21,877 - INFO - Connection established, creating session...
+2025-04-06 22:10:21,878 - INFO - Session created, initializing...
+2025-04-06 22:10:22,685 - INFO - Requesting tool list...
+2025-04-06 22:10:22,689 - INFO - Successfully retrieved 22 tools
+2025-04-06 22:10:22,689 - INFO - Creating system prompt...
+2025-04-06 22:10:22,690 - INFO - Number of tools: 22
+2025-04-06 22:10:22,690 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-06 22:10:22,690 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-06 22:10:22,690 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-06 22:10:22,691 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-06 22:10:22,692 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-06 22:10:22,692 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-06 22:10:22,692 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-06 22:10:22,692 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-06 22:10:22,693 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-06 22:10:22,693 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-06 22:10:22,693 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-06 22:10:22,693 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-06 22:10:22,693 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-06 22:10:22,694 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-06 22:10:22,694 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-06 22:10:22,694 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-06 22:10:22,694 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-06 22:10:22,695 - INFO - Successfully created tools description
+2025-04-06 22:10:22,695 - INFO - Created system prompt...
+2025-04-06 22:10:22,695 - INFO - Starting iteration loop...
+2025-04-06 22:10:22,695 - INFO - 
+--- Iteration 1 ---
+2025-04-06 22:10:22,696 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:22,696 - INFO - Starting LLM generation...
+2025-04-06 22:10:22,697 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:22,699 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-06 22:10:22,716 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F01A0E9A90>
+2025-04-06 22:10:22,717 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F01A0075C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-06 22:10:22,763 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F01A1102D0>
+2025-04-06 22:10:22,764 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:22,765 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:22,765 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:22,765 - DEBUG - send_request_body.complete
+2025-04-06 22:10:22,766 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:24,630 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:23 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1855'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:24,633 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:24,634 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:24,636 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:24,637 - DEBUG - response_closed.started
+2025-04-06 22:10:24,638 - DEBUG - response_closed.complete
+2025-04-06 22:10:24,639 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:24,640 - INFO - LLM generation completed
+2025-04-06 22:10:24,641 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|ASWATHI
+2025-04-06 22:10:24,641 - INFO - 
+DEBUG: Raw function info:  strings_to_chars_to_int|ASWATHI
+2025-04-06 22:10:24,642 - INFO - DEBUG: Split parts: ['strings_to_chars_to_int', 'ASWATHI']
+2025-04-06 22:10:24,642 - INFO - DEBUG: Function name: strings_to_chars_to_int
+2025-04-06 22:10:24,643 - INFO - DEBUG: Raw parameters: ['ASWATHI']
+2025-04-06 22:10:24,643 - INFO - DEBUG: Found tool: strings_to_chars_to_int
+2025-04-06 22:10:24,644 - INFO - DEBUG: Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-06 22:10:24,644 - INFO - DEBUG: Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-06 22:10:24,644 - INFO - DEBUG: Converting parameter string with value ASWATHI to type string
+2025-04-06 22:10:24,645 - INFO - DEBUG: Final arguments: {'string': 'ASWATHI'}
+2025-04-06 22:10:24,645 - INFO - DEBUG: Calling tool strings_to_chars_to_int
+2025-04-06 22:10:24,648 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='83', annotations=None), TextContent(type='text', text='87', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='73', annotations=None)] isError=False
+2025-04-06 22:10:24,649 - INFO - DEBUG: Result has content attribute
+2025-04-06 22:10:24,650 - INFO - DEBUG: Final iteration result: ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:10:24,650 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:10:24,650 - INFO - ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:10:24,651 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:10:24,651 - INFO - 
+--- Iteration 2 ---
+2025-04-06 22:10:24,652 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:24,652 - INFO - Starting LLM generation...
+2025-04-06 22:10:24,652 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:24,653 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:24,654 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:24,654 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:24,655 - DEBUG - send_request_body.complete
+2025-04-06 22:10:24,655 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:25,486 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:24 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=821'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:25,488 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:25,489 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:25,490 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:25,490 - DEBUG - response_closed.started
+2025-04-06 22:10:25,491 - DEBUG - response_closed.complete
+2025-04-06 22:10:25,491 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:25,492 - INFO - LLM generation completed
+2025-04-06 22:10:25,493 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:10:25,493 - INFO - 
+DEBUG: Raw function info:  int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:10:25,493 - INFO - DEBUG: Split parts: ['int_list_to_exponential_sum', '[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:10:25,494 - INFO - DEBUG: Function name: int_list_to_exponential_sum
+2025-04-06 22:10:25,494 - INFO - DEBUG: Raw parameters: ['[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:10:25,494 - INFO - DEBUG: Found tool: int_list_to_exponential_sum
+2025-04-06 22:10:25,495 - INFO - DEBUG: Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-06 22:10:25,495 - INFO - DEBUG: Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-06 22:10:25,495 - INFO - DEBUG: Converting parameter int_list with value [65, 83, 87, 65, 84, 72, 73] to type array
+2025-04-06 22:10:25,496 - INFO - DEBUG: Final arguments: {'int_list': [65, 83, 87, 65, 84, 72, 73]}
+2025-04-06 22:10:25,496 - INFO - DEBUG: Calling tool int_list_to_exponential_sum
+2025-04-06 22:10:25,499 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='6.489831247211316e+37', annotations=None)] isError=False
+2025-04-06 22:10:25,499 - INFO - DEBUG: Result has content attribute
+2025-04-06 22:10:25,500 - INFO - DEBUG: Final iteration result: ['6.489831247211316e+37']
+2025-04-06 22:10:25,500 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:10:25,501 - INFO - ['6.489831247211316e+37']
+2025-04-06 22:10:25,501 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:10:25,502 - INFO - 
+--- Iteration 3 ---
+2025-04-06 22:10:25,502 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:25,502 - INFO - Starting LLM generation...
+2025-04-06 22:10:25,503 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:25,503 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:25,504 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:25,504 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:25,505 - DEBUG - send_request_body.complete
+2025-04-06 22:10:25,505 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:26,446 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:25 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=932'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:26,448 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:26,449 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:26,450 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:26,451 - DEBUG - response_closed.started
+2025-04-06 22:10:26,452 - DEBUG - response_closed.complete
+2025-04-06 22:10:26,453 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:26,454 - INFO - LLM generation completed
+2025-04-06 22:10:26,455 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-06 22:10:26,455 - INFO - 
+DEBUG: Raw function info:  open_paint
+2025-04-06 22:10:26,456 - INFO - DEBUG: Split parts: ['open_paint']
+2025-04-06 22:10:26,456 - INFO - DEBUG: Function name: open_paint
+2025-04-06 22:10:26,456 - INFO - DEBUG: Raw parameters: []
+2025-04-06 22:10:26,457 - INFO - DEBUG: Found tool: open_paint
+2025-04-06 22:10:26,457 - INFO - DEBUG: Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-06 22:10:26,457 - INFO - DEBUG: Schema properties: {}
+2025-04-06 22:10:26,457 - INFO - DEBUG: Final arguments: {}
+2025-04-06 22:10:26,457 - INFO - DEBUG: Calling tool open_paint
+2025-04-06 22:10:26,904 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:10:26,905 - INFO - DEBUG: Result has content attribute
+2025-04-06 22:10:26,905 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:10:26,906 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:10:26,906 - INFO - ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:10:26,906 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:10:26,907 - INFO - 
+--- Iteration 4 ---
+2025-04-06 22:10:26,907 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:26,907 - INFO - Starting LLM generation...
+2025-04-06 22:10:26,908 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:26,909 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:26,910 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:26,910 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:26,910 - DEBUG - send_request_body.complete
+2025-04-06 22:10:26,910 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:27,710 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:26 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=790'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:27,712 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:27,713 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:27,714 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:27,715 - DEBUG - response_closed.started
+2025-04-06 22:10:27,715 - DEBUG - response_closed.complete
+2025-04-06 22:10:27,716 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:27,717 - INFO - LLM generation completed
+2025-04-06 22:10:27,717 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|450|300|750|600
+2025-04-06 22:10:27,718 - INFO - 
+DEBUG: Raw function info:  draw_rectangle|450|300|750|600
+2025-04-06 22:10:27,718 - INFO - DEBUG: Split parts: ['draw_rectangle', '450', '300', '750', '600']
+2025-04-06 22:10:27,718 - INFO - DEBUG: Function name: draw_rectangle
+2025-04-06 22:10:27,719 - INFO - DEBUG: Raw parameters: ['450', '300', '750', '600']
+2025-04-06 22:10:27,719 - INFO - DEBUG: Found tool: draw_rectangle
+2025-04-06 22:10:27,719 - INFO - DEBUG: Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-06 22:10:27,720 - INFO - DEBUG: Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-06 22:10:27,720 - INFO - DEBUG: Converting parameter x1 with value 450 to type integer
+2025-04-06 22:10:27,720 - INFO - DEBUG: Converting parameter y1 with value 300 to type integer
+2025-04-06 22:10:27,720 - INFO - DEBUG: Converting parameter x2 with value 750 to type integer
+2025-04-06 22:10:27,721 - INFO - DEBUG: Converting parameter y2 with value 600 to type integer
+2025-04-06 22:10:27,721 - INFO - DEBUG: Final arguments: {'x1': 450, 'y1': 300, 'x2': 750, 'y2': 600}
+2025-04-06 22:10:27,721 - INFO - DEBUG: Calling tool draw_rectangle
+2025-04-06 22:10:29,186 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:10:29,188 - INFO - DEBUG: Result has content attribute
+2025-04-06 22:10:29,188 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:10:29,189 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:10:29,190 - INFO - ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:10:29,191 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:10:29,192 - INFO - 
+--- Iteration 5 ---
+2025-04-06 22:10:29,193 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:29,193 - INFO - Starting LLM generation...
+2025-04-06 22:10:29,194 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:29,195 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:29,195 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:29,196 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:29,196 - DEBUG - send_request_body.complete
+2025-04-06 22:10:29,196 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:29,986 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:28 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=780'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:29,988 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:29,989 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:29,990 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:29,991 - DEBUG - response_closed.started
+2025-04-06 22:10:29,991 - DEBUG - response_closed.complete
+2025-04-06 22:10:29,992 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:29,993 - INFO - LLM generation completed
+2025-04-06 22:10:29,993 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:10:29,993 - INFO - 
+DEBUG: Raw function info:  add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:10:29,994 - INFO - DEBUG: Split parts: ['add_text_in_paint', '6.489831247211316e+37', '500', '400']
+2025-04-06 22:10:29,994 - INFO - DEBUG: Function name: add_text_in_paint
+2025-04-06 22:10:29,994 - INFO - DEBUG: Raw parameters: ['6.489831247211316e+37', '500', '400']
+2025-04-06 22:10:29,994 - INFO - DEBUG: Found tool: add_text_in_paint
+2025-04-06 22:10:29,994 - INFO - DEBUG: Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}, 'required': ['text', 'x_text', 'y_text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-06 22:10:29,995 - INFO - DEBUG: Schema properties: {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}
+2025-04-06 22:10:29,995 - INFO - DEBUG: Converting parameter text with value 6.489831247211316e+37 to type string
+2025-04-06 22:10:29,995 - INFO - DEBUG: Converting parameter x_text with value 500 to type integer
+2025-04-06 22:10:29,995 - INFO - DEBUG: Converting parameter y_text with value 400 to type integer
+2025-04-06 22:10:29,996 - INFO - DEBUG: Final arguments: {'text': '6.489831247211316e+37', 'x_text': 500, 'y_text': 400}
+2025-04-06 22:10:29,996 - INFO - DEBUG: Calling tool add_text_in_paint
+2025-04-06 22:10:32,658 - INFO - DEBUG: Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:10:32,659 - INFO - DEBUG: Result has content attribute
+2025-04-06 22:10:32,659 - INFO - DEBUG: Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:10:32,659 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:10:32,660 - INFO - ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:10:32,660 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:10:32,660 - INFO - 
+--- Iteration 6 ---
+2025-04-06 22:10:32,660 - INFO - Preparing to generate LLM response...
+2025-04-06 22:10:32,661 - INFO - Starting LLM generation...
+2025-04-06 22:10:32,661 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:10:32,662 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:32,662 - DEBUG - send_request_headers.complete
+2025-04-06 22:10:32,662 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:10:32,663 - DEBUG - send_request_body.complete
+2025-04-06 22:10:32,663 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:10:33,391 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:40:32 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=718'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:10:33,393 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:10:33,394 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:10:33,395 - DEBUG - receive_response_body.complete
+2025-04-06 22:10:33,396 - DEBUG - response_closed.started
+2025-04-06 22:10:33,397 - DEBUG - response_closed.complete
+2025-04-06 22:10:33,399 - INFO - AFC remote call 1 is done.
+2025-04-06 22:10:33,400 - INFO - LLM generation completed
+2025-04-06 22:10:33,401 - INFO - LLM Response: FINAL_ANSWER: [6.489831247211316e+37]
+2025-04-06 22:10:33,402 - INFO - 
+##### Iterations Finished! #####
+
+2025-04-06 22:10:33,402 - INFO - 
+=== Agent Execution Complete ===
+2025-04-06 22:10:33,526 - DEBUG - close.started
+2025-04-06 22:10:33,528 - DEBUG - close.complete
+2025-04-06 22:12:21,087 - DEBUG - Using proactor: IocpProactor
+2025-04-06 22:12:21,089 - INFO - Starting main execution...
+2025-04-06 22:12:21,089 - INFO - Establishing connection to MCP server...
+2025-04-06 22:12:21,101 - INFO - Connection established, creating session...
+2025-04-06 22:12:21,102 - INFO - Session created, initializing...
+2025-04-06 22:12:21,905 - INFO - Requesting tool list...
+2025-04-06 22:12:21,909 - INFO - Successfully retrieved 22 tools
+2025-04-06 22:12:21,909 - INFO - Creating system prompt...
+2025-04-06 22:12:21,910 - INFO - Number of tools: 22
+2025-04-06 22:12:21,910 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-06 22:12:21,910 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-06 22:12:21,911 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-06 22:12:21,911 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-06 22:12:21,911 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-06 22:12:21,911 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-06 22:12:21,912 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-06 22:12:21,912 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-06 22:12:21,912 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-06 22:12:21,912 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-06 22:12:21,913 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-06 22:12:21,913 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-06 22:12:21,913 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-06 22:12:21,913 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-06 22:12:21,914 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-06 22:12:21,914 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-06 22:12:21,914 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-06 22:12:21,914 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-06 22:12:21,915 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-06 22:12:21,915 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-06 22:12:21,915 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-06 22:12:21,915 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-06 22:12:21,916 - INFO - Successfully created tools description
+2025-04-06 22:12:21,916 - INFO - Created system prompt...
+2025-04-06 22:12:21,917 - INFO - Starting iteration loop...
+2025-04-06 22:12:21,917 - INFO - 
+--- Iteration 1 ---
+2025-04-06 22:12:21,917 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:21,918 - INFO - Starting LLM generation...
+2025-04-06 22:12:21,921 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:21,923 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-06 22:12:21,937 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F5224B9A90>
+2025-04-06 22:12:21,938 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001F5223D75C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-06 22:12:21,985 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001F5224E02D0>
+2025-04-06 22:12:21,985 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:21,986 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:21,986 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:21,987 - DEBUG - send_request_body.complete
+2025-04-06 22:12:21,987 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:23,773 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:22 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1777'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:23,777 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:23,778 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:23,780 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:23,781 - DEBUG - response_closed.started
+2025-04-06 22:12:23,781 - DEBUG - response_closed.complete
+2025-04-06 22:12:23,783 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:23,784 - INFO - LLM generation completed
+2025-04-06 22:12:23,785 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|ASWATHI
+2025-04-06 22:12:23,785 - INFO - 
+Raw function info:  strings_to_chars_to_int|ASWATHI
+2025-04-06 22:12:23,786 - INFO - Split parts: ['strings_to_chars_to_int', 'ASWATHI']
+2025-04-06 22:12:23,787 - INFO - Function name: strings_to_chars_to_int
+2025-04-06 22:12:23,787 - INFO - Raw parameters: ['ASWATHI']
+2025-04-06 22:12:23,787 - INFO - Found tool: strings_to_chars_to_int
+2025-04-06 22:12:23,788 - INFO - Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-06 22:12:23,788 - INFO - Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-06 22:12:23,789 - INFO - Converting parameter string with value ASWATHI to type string
+2025-04-06 22:12:23,789 - INFO - Final arguments: {'string': 'ASWATHI'}
+2025-04-06 22:12:23,790 - INFO - Calling tool strings_to_chars_to_int
+2025-04-06 22:12:23,794 - INFO - Raw result: meta=None content=[TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='83', annotations=None), TextContent(type='text', text='87', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='73', annotations=None)] isError=False
+2025-04-06 22:12:23,794 - INFO - Result has content attribute
+2025-04-06 22:12:23,795 - INFO - Final iteration result: ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:12:23,795 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:12:23,796 - INFO - ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:12:23,796 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:12:23,796 - INFO - 
+--- Iteration 2 ---
+2025-04-06 22:12:23,797 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:23,797 - INFO - Starting LLM generation...
+2025-04-06 22:12:23,798 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:23,799 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:23,799 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:23,800 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:23,800 - DEBUG - send_request_body.complete
+2025-04-06 22:12:23,801 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:24,570 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:23 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=762'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:24,572 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:24,573 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:24,574 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:24,575 - DEBUG - response_closed.started
+2025-04-06 22:12:24,575 - DEBUG - response_closed.complete
+2025-04-06 22:12:24,576 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:24,577 - INFO - LLM generation completed
+2025-04-06 22:12:24,577 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:12:24,577 - INFO - 
+Raw function info:  int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:12:24,578 - INFO - Split parts: ['int_list_to_exponential_sum', '[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:12:24,578 - INFO - Function name: int_list_to_exponential_sum
+2025-04-06 22:12:24,578 - INFO - Raw parameters: ['[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:12:24,578 - INFO - Found tool: int_list_to_exponential_sum
+2025-04-06 22:12:24,579 - INFO - Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-06 22:12:24,579 - INFO - Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-06 22:12:24,579 - INFO - Converting parameter int_list with value [65, 83, 87, 65, 84, 72, 73] to type array
+2025-04-06 22:12:24,579 - INFO - Final arguments: {'int_list': [65, 83, 87, 65, 84, 72, 73]}
+2025-04-06 22:12:24,580 - INFO - Calling tool int_list_to_exponential_sum
+2025-04-06 22:12:24,582 - INFO - Raw result: meta=None content=[TextContent(type='text', text='6.489831247211316e+37', annotations=None)] isError=False
+2025-04-06 22:12:24,582 - INFO - Result has content attribute
+2025-04-06 22:12:24,582 - INFO - Final iteration result: ['6.489831247211316e+37']
+2025-04-06 22:12:24,582 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:12:24,583 - INFO - ['6.489831247211316e+37']
+2025-04-06 22:12:24,583 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:12:24,583 - INFO - 
+--- Iteration 3 ---
+2025-04-06 22:12:24,583 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:24,584 - INFO - Starting LLM generation...
+2025-04-06 22:12:24,584 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:24,585 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:24,586 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:24,586 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:24,586 - DEBUG - send_request_body.complete
+2025-04-06 22:12:24,587 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:25,521 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:24 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=925'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:25,523 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:25,524 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:25,525 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:25,526 - DEBUG - response_closed.started
+2025-04-06 22:12:25,527 - DEBUG - response_closed.complete
+2025-04-06 22:12:25,529 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:25,530 - INFO - LLM generation completed
+2025-04-06 22:12:25,531 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-06 22:12:25,532 - INFO - 
+Raw function info:  open_paint
+2025-04-06 22:12:25,532 - INFO - Split parts: ['open_paint']
+2025-04-06 22:12:25,533 - INFO - Function name: open_paint
+2025-04-06 22:12:25,533 - INFO - Raw parameters: []
+2025-04-06 22:12:25,534 - INFO - Found tool: open_paint
+2025-04-06 22:12:25,535 - INFO - Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-06 22:12:25,535 - INFO - Schema properties: {}
+2025-04-06 22:12:25,536 - INFO - Final arguments: {}
+2025-04-06 22:12:25,536 - INFO - Calling tool open_paint
+2025-04-06 22:12:25,978 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:12:25,979 - INFO - Result has content attribute
+2025-04-06 22:12:25,979 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:12:25,980 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:12:25,980 - INFO - ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:12:25,981 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:12:25,981 - INFO - 
+--- Iteration 4 ---
+2025-04-06 22:12:25,982 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:25,982 - INFO - Starting LLM generation...
+2025-04-06 22:12:25,983 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:25,983 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:25,984 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:25,984 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:25,984 - DEBUG - send_request_body.complete
+2025-04-06 22:12:25,985 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:26,694 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:25 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=702'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:26,696 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:26,697 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:26,698 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:26,698 - DEBUG - response_closed.started
+2025-04-06 22:12:26,699 - DEBUG - response_closed.complete
+2025-04-06 22:12:26,700 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:26,700 - INFO - LLM generation completed
+2025-04-06 22:12:26,701 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|450|300|750|600
+2025-04-06 22:12:26,701 - INFO - 
+Raw function info:  draw_rectangle|450|300|750|600
+2025-04-06 22:12:26,701 - INFO - Split parts: ['draw_rectangle', '450', '300', '750', '600']
+2025-04-06 22:12:26,702 - INFO - Function name: draw_rectangle
+2025-04-06 22:12:26,702 - INFO - Raw parameters: ['450', '300', '750', '600']
+2025-04-06 22:12:26,702 - INFO - Found tool: draw_rectangle
+2025-04-06 22:12:26,703 - INFO - Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-06 22:12:26,703 - INFO - Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-06 22:12:26,703 - INFO - Converting parameter x1 with value 450 to type integer
+2025-04-06 22:12:26,704 - INFO - Converting parameter y1 with value 300 to type integer
+2025-04-06 22:12:26,704 - INFO - Converting parameter x2 with value 750 to type integer
+2025-04-06 22:12:26,704 - INFO - Converting parameter y2 with value 600 to type integer
+2025-04-06 22:12:26,704 - INFO - Final arguments: {'x1': 450, 'y1': 300, 'x2': 750, 'y2': 600}
+2025-04-06 22:12:26,704 - INFO - Calling tool draw_rectangle
+2025-04-06 22:12:28,169 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:12:28,170 - INFO - Result has content attribute
+2025-04-06 22:12:28,171 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:12:28,172 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:12:28,173 - INFO - ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:12:28,174 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:12:28,175 - INFO - 
+--- Iteration 5 ---
+2025-04-06 22:12:28,176 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:28,176 - INFO - Starting LLM generation...
+2025-04-06 22:12:28,177 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:28,178 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:28,179 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:28,179 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:28,180 - DEBUG - send_request_body.complete
+2025-04-06 22:12:28,181 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:28,954 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:27 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=766'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:28,955 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:28,956 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:28,956 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:28,956 - DEBUG - response_closed.started
+2025-04-06 22:12:28,957 - DEBUG - response_closed.complete
+2025-04-06 22:12:28,957 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:28,958 - INFO - LLM generation completed
+2025-04-06 22:12:28,958 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:12:28,959 - INFO - 
+Raw function info:  add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:12:28,959 - INFO - Split parts: ['add_text_in_paint', '6.489831247211316e+37', '500', '400']
+2025-04-06 22:12:28,959 - INFO - Function name: add_text_in_paint
+2025-04-06 22:12:28,959 - INFO - Raw parameters: ['6.489831247211316e+37', '500', '400']
+2025-04-06 22:12:28,959 - INFO - Found tool: add_text_in_paint
+2025-04-06 22:12:28,960 - INFO - Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}, 'required': ['text', 'x_text', 'y_text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-06 22:12:28,960 - INFO - Schema properties: {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}
+2025-04-06 22:12:28,960 - INFO - Converting parameter text with value 6.489831247211316e+37 to type string
+2025-04-06 22:12:28,961 - INFO - Converting parameter x_text with value 500 to type integer
+2025-04-06 22:12:28,961 - INFO - Converting parameter y_text with value 400 to type integer
+2025-04-06 22:12:28,961 - INFO - Final arguments: {'text': '6.489831247211316e+37', 'x_text': 500, 'y_text': 400}
+2025-04-06 22:12:28,961 - INFO - Calling tool add_text_in_paint
+2025-04-06 22:12:31,625 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:12:31,626 - INFO - Result has content attribute
+2025-04-06 22:12:31,626 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:12:31,626 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:12:31,627 - INFO - ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:12:31,627 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:12:31,627 - INFO - 
+--- Iteration 6 ---
+2025-04-06 22:12:31,628 - INFO - Preparing to generate LLM response...
+2025-04-06 22:12:31,628 - INFO - Starting LLM generation...
+2025-04-06 22:12:31,628 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:12:31,629 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:31,629 - DEBUG - send_request_headers.complete
+2025-04-06 22:12:31,629 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:12:31,630 - DEBUG - send_request_body.complete
+2025-04-06 22:12:31,630 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:12:32,409 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:42:31 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=770'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:12:32,411 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:12:32,411 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:12:32,413 - DEBUG - receive_response_body.complete
+2025-04-06 22:12:32,413 - DEBUG - response_closed.started
+2025-04-06 22:12:32,414 - DEBUG - response_closed.complete
+2025-04-06 22:12:32,415 - INFO - AFC remote call 1 is done.
+2025-04-06 22:12:32,415 - INFO - LLM generation completed
+2025-04-06 22:12:32,416 - INFO - LLM Response: FINAL_ANSWER: [6.489831247211316e+37]
+2025-04-06 22:12:32,416 - INFO - 
+##### Iterations Finished! #####
+
+2025-04-06 22:12:32,416 - INFO - 
+=== Agent Execution Complete ===
+2025-04-06 22:12:32,524 - DEBUG - close.started
+2025-04-06 22:12:32,525 - DEBUG - close.complete
+2025-04-06 22:18:47,192 - DEBUG - Using proactor: IocpProactor
+2025-04-06 22:18:47,193 - INFO - Starting main execution...
+2025-04-06 22:18:47,193 - INFO - Establishing connection to MCP server...
+2025-04-06 22:18:47,209 - INFO - Connection established, creating session...
+2025-04-06 22:18:47,210 - INFO - Session created, initializing...
+2025-04-06 22:18:48,191 - INFO - Requesting tool list...
+2025-04-06 22:18:48,198 - INFO - Successfully retrieved 22 tools
+2025-04-06 22:18:48,198 - INFO - Creating system prompt...
+2025-04-06 22:18:48,198 - INFO - Number of tools: 22
+2025-04-06 22:18:48,199 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-06 22:18:48,199 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-06 22:18:48,199 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-06 22:18:48,200 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-06 22:18:48,200 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-06 22:18:48,200 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-06 22:18:48,201 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-06 22:18:48,201 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-06 22:18:48,201 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-06 22:18:48,202 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-06 22:18:48,202 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-06 22:18:48,202 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-06 22:18:48,202 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-06 22:18:48,203 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-06 22:18:48,203 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-06 22:18:48,203 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-06 22:18:48,204 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-06 22:18:48,204 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-06 22:18:48,204 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-06 22:18:48,205 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-06 22:18:48,205 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-06 22:18:48,205 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-06 22:18:48,205 - INFO - Successfully created tools description
+2025-04-06 22:18:48,206 - INFO - Created system prompt...
+2025-04-06 22:18:48,206 - INFO - Starting iteration loop...
+2025-04-06 22:18:48,206 - INFO - 
+--- Iteration 1 ---
+2025-04-06 22:18:48,206 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:48,207 - INFO - Starting LLM generation...
+2025-04-06 22:18:48,208 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:48,209 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-06 22:18:48,226 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BB13F09A90>
+2025-04-06 22:18:48,227 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002BB13E275C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-06 22:18:48,275 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002BB13F302D0>
+2025-04-06 22:18:48,276 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:48,279 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:48,280 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:48,281 - DEBUG - send_request_body.complete
+2025-04-06 22:18:48,281 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:50,098 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:49 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1808'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:50,101 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:50,101 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:50,102 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:50,102 - DEBUG - response_closed.started
+2025-04-06 22:18:50,103 - DEBUG - response_closed.complete
+2025-04-06 22:18:50,104 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:50,104 - INFO - LLM generation completed
+2025-04-06 22:18:50,105 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|ASWATHI
+2025-04-06 22:18:50,106 - INFO - 
+Raw function info:  strings_to_chars_to_int|ASWATHI
+2025-04-06 22:18:50,106 - INFO - Split parts: ['strings_to_chars_to_int', 'ASWATHI']
+2025-04-06 22:18:50,106 - INFO - Function name: strings_to_chars_to_int
+2025-04-06 22:18:50,106 - INFO - Raw parameters: ['ASWATHI']
+2025-04-06 22:18:50,107 - INFO - Found tool: strings_to_chars_to_int
+2025-04-06 22:18:50,107 - INFO - Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-06 22:18:50,107 - INFO - Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-06 22:18:50,107 - INFO - Converting parameter string with value ASWATHI to type string
+2025-04-06 22:18:50,108 - INFO - Final arguments: {'string': 'ASWATHI'}
+2025-04-06 22:18:50,108 - INFO - Calling tool strings_to_chars_to_int
+2025-04-06 22:18:50,111 - INFO - Raw result: meta=None content=[TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='83', annotations=None), TextContent(type='text', text='87', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='73', annotations=None)] isError=False
+2025-04-06 22:18:50,111 - INFO - Result has content attribute
+2025-04-06 22:18:50,112 - INFO - Final iteration result: ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:18:50,112 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:18:50,112 - INFO - ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:18:50,113 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:18:50,113 - INFO - 
+--- Iteration 2 ---
+2025-04-06 22:18:50,113 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:50,114 - INFO - Starting LLM generation...
+2025-04-06 22:18:50,114 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:50,115 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:50,116 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:50,116 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:50,117 - DEBUG - send_request_body.complete
+2025-04-06 22:18:50,117 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:50,930 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:49 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=803'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:50,933 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:50,936 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:50,936 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:50,937 - DEBUG - response_closed.started
+2025-04-06 22:18:50,937 - DEBUG - response_closed.complete
+2025-04-06 22:18:50,938 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:50,939 - INFO - LLM generation completed
+2025-04-06 22:18:50,940 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:18:50,940 - INFO - 
+Raw function info:  int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:18:50,941 - INFO - Split parts: ['int_list_to_exponential_sum', '[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:18:50,941 - INFO - Function name: int_list_to_exponential_sum
+2025-04-06 22:18:50,941 - INFO - Raw parameters: ['[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:18:50,942 - INFO - Found tool: int_list_to_exponential_sum
+2025-04-06 22:18:50,942 - INFO - Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-06 22:18:50,942 - INFO - Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-06 22:18:50,943 - INFO - Converting parameter int_list with value [65, 83, 87, 65, 84, 72, 73] to type array
+2025-04-06 22:18:50,943 - INFO - Final arguments: {'int_list': [65, 83, 87, 65, 84, 72, 73]}
+2025-04-06 22:18:50,943 - INFO - Calling tool int_list_to_exponential_sum
+2025-04-06 22:18:50,948 - INFO - Raw result: meta=None content=[TextContent(type='text', text='6.489831247211316e+37', annotations=None)] isError=False
+2025-04-06 22:18:50,949 - INFO - Result has content attribute
+2025-04-06 22:18:50,950 - INFO - Final iteration result: ['6.489831247211316e+37']
+2025-04-06 22:18:50,950 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:18:50,951 - INFO - ['6.489831247211316e+37']
+2025-04-06 22:18:50,951 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:18:50,951 - INFO - 
+--- Iteration 3 ---
+2025-04-06 22:18:50,952 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:50,952 - INFO - Starting LLM generation...
+2025-04-06 22:18:50,953 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:50,954 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:50,955 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:50,955 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:50,956 - DEBUG - send_request_body.complete
+2025-04-06 22:18:50,957 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:51,851 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:50 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=886'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:51,854 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:51,854 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:51,856 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:51,856 - DEBUG - response_closed.started
+2025-04-06 22:18:51,857 - DEBUG - response_closed.complete
+2025-04-06 22:18:51,858 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:51,859 - INFO - LLM generation completed
+2025-04-06 22:18:51,859 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-06 22:18:51,859 - INFO - 
+Raw function info:  open_paint
+2025-04-06 22:18:51,860 - INFO - Split parts: ['open_paint']
+2025-04-06 22:18:51,860 - INFO - Function name: open_paint
+2025-04-06 22:18:51,861 - INFO - Raw parameters: []
+2025-04-06 22:18:51,861 - INFO - Found tool: open_paint
+2025-04-06 22:18:51,861 - INFO - Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-06 22:18:51,862 - INFO - Schema properties: {}
+2025-04-06 22:18:51,862 - INFO - Final arguments: {}
+2025-04-06 22:18:51,862 - INFO - Calling tool open_paint
+2025-04-06 22:18:52,382 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:18:52,383 - INFO - Result has content attribute
+2025-04-06 22:18:52,383 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:18:52,383 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:18:52,384 - INFO - ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:18:52,384 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:18:52,385 - INFO - 
+--- Iteration 4 ---
+2025-04-06 22:18:52,385 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:52,385 - INFO - Starting LLM generation...
+2025-04-06 22:18:52,386 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:52,387 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:52,388 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:52,388 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:52,389 - DEBUG - send_request_body.complete
+2025-04-06 22:18:52,389 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:53,155 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:52 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=757'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:53,157 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:53,157 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:53,158 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:53,159 - DEBUG - response_closed.started
+2025-04-06 22:18:53,159 - DEBUG - response_closed.complete
+2025-04-06 22:18:53,160 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:53,161 - INFO - LLM generation completed
+2025-04-06 22:18:53,162 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|450|300|780|500
+2025-04-06 22:18:53,162 - INFO - 
+Raw function info:  draw_rectangle|450|300|780|500
+2025-04-06 22:18:53,163 - INFO - Split parts: ['draw_rectangle', '450', '300', '780', '500']
+2025-04-06 22:18:53,163 - INFO - Function name: draw_rectangle
+2025-04-06 22:18:53,163 - INFO - Raw parameters: ['450', '300', '780', '500']
+2025-04-06 22:18:53,164 - INFO - Found tool: draw_rectangle
+2025-04-06 22:18:53,164 - INFO - Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-06 22:18:53,165 - INFO - Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-06 22:18:53,165 - INFO - Converting parameter x1 with value 450 to type integer
+2025-04-06 22:18:53,165 - INFO - Converting parameter y1 with value 300 to type integer
+2025-04-06 22:18:53,165 - INFO - Converting parameter x2 with value 780 to type integer
+2025-04-06 22:18:53,166 - INFO - Converting parameter y2 with value 500 to type integer
+2025-04-06 22:18:53,166 - INFO - Final arguments: {'x1': 450, 'y1': 300, 'x2': 780, 'y2': 500}
+2025-04-06 22:18:53,166 - INFO - Calling tool draw_rectangle
+2025-04-06 22:18:54,628 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (780,500)", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:18:54,631 - INFO - Result has content attribute
+2025-04-06 22:18:54,632 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (780,500)", "annotations": null}]}']
+2025-04-06 22:18:54,632 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:18:54,633 - INFO - ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (780,500)", "annotations": null}]}']
+2025-04-06 22:18:54,633 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:18:54,634 - INFO - 
+--- Iteration 5 ---
+2025-04-06 22:18:54,634 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:54,635 - INFO - Starting LLM generation...
+2025-04-06 22:18:54,635 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:54,636 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:54,636 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:54,637 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:54,637 - DEBUG - send_request_body.complete
+2025-04-06 22:18:54,637 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:55,388 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:54 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=742'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:55,389 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:55,390 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:55,391 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:55,391 - DEBUG - response_closed.started
+2025-04-06 22:18:55,391 - DEBUG - response_closed.complete
+2025-04-06 22:18:55,392 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:55,393 - INFO - LLM generation completed
+2025-04-06 22:18:55,393 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|6.489831247211316e+37|460|350
+2025-04-06 22:18:55,393 - INFO - 
+Raw function info:  add_text_in_paint|6.489831247211316e+37|460|350
+2025-04-06 22:18:55,393 - INFO - Split parts: ['add_text_in_paint', '6.489831247211316e+37', '460', '350']
+2025-04-06 22:18:55,394 - INFO - Function name: add_text_in_paint
+2025-04-06 22:18:55,394 - INFO - Raw parameters: ['6.489831247211316e+37', '460', '350']
+2025-04-06 22:18:55,394 - INFO - Found tool: add_text_in_paint
+2025-04-06 22:18:55,394 - INFO - Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}, 'required': ['text', 'x_text', 'y_text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-06 22:18:55,395 - INFO - Schema properties: {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}
+2025-04-06 22:18:55,395 - INFO - Converting parameter text with value 6.489831247211316e+37 to type string
+2025-04-06 22:18:55,395 - INFO - Converting parameter x_text with value 460 to type integer
+2025-04-06 22:18:55,395 - INFO - Converting parameter y_text with value 350 to type integer
+2025-04-06 22:18:55,396 - INFO - Final arguments: {'text': '6.489831247211316e+37', 'x_text': 460, 'y_text': 350}
+2025-04-06 22:18:55,396 - INFO - Calling tool add_text_in_paint
+2025-04-06 22:18:58,062 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:18:58,063 - INFO - Result has content attribute
+2025-04-06 22:18:58,063 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:18:58,063 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:18:58,063 - INFO - ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:18:58,064 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:18:58,064 - INFO - 
+--- Iteration 6 ---
+2025-04-06 22:18:58,064 - INFO - Preparing to generate LLM response...
+2025-04-06 22:18:58,064 - INFO - Starting LLM generation...
+2025-04-06 22:18:58,065 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:18:58,065 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:58,066 - DEBUG - send_request_headers.complete
+2025-04-06 22:18:58,066 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:18:58,066 - DEBUG - send_request_body.complete
+2025-04-06 22:18:58,067 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:18:58,777 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:48:57 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=702'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:18:58,779 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:18:58,779 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:18:58,780 - DEBUG - receive_response_body.complete
+2025-04-06 22:18:58,780 - DEBUG - response_closed.started
+2025-04-06 22:18:58,781 - DEBUG - response_closed.complete
+2025-04-06 22:18:58,782 - INFO - AFC remote call 1 is done.
+2025-04-06 22:18:58,783 - INFO - LLM generation completed
+2025-04-06 22:18:58,784 - INFO - LLM Response: FINAL_ANSWER: [6.489831247211316e+37]
+2025-04-06 22:18:58,785 - INFO - 
+##### Iterations Finished! #####
+
+2025-04-06 22:18:58,785 - INFO - 
+=== Agent Execution Complete ===
+2025-04-06 22:18:58,918 - DEBUG - close.started
+2025-04-06 22:18:58,919 - DEBUG - close.complete
+2025-04-06 22:19:14,012 - DEBUG - Using proactor: IocpProactor
+2025-04-06 22:19:14,013 - INFO - Starting main execution...
+2025-04-06 22:19:14,013 - INFO - Establishing connection to MCP server...
+2025-04-06 22:19:14,033 - INFO - Connection established, creating session...
+2025-04-06 22:19:14,034 - INFO - Session created, initializing...
+2025-04-06 22:19:15,037 - INFO - Requesting tool list...
+2025-04-06 22:19:15,043 - INFO - Successfully retrieved 22 tools
+2025-04-06 22:19:15,043 - INFO - Creating system prompt...
+2025-04-06 22:19:15,044 - INFO - Number of tools: 22
+2025-04-06 22:19:15,044 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-06 22:19:15,044 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-06 22:19:15,044 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-06 22:19:15,045 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-06 22:19:15,045 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-06 22:19:15,046 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-06 22:19:15,046 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-06 22:19:15,047 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-06 22:19:15,047 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-06 22:19:15,047 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-06 22:19:15,048 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-06 22:19:15,048 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-06 22:19:15,049 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-06 22:19:15,049 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-06 22:19:15,049 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-06 22:19:15,050 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-06 22:19:15,050 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-06 22:19:15,050 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-06 22:19:15,051 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-06 22:19:15,051 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-06 22:19:15,051 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-06 22:19:15,052 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-06 22:19:15,052 - INFO - Successfully created tools description
+2025-04-06 22:19:15,052 - INFO - Created system prompt...
+2025-04-06 22:19:15,053 - INFO - Starting iteration loop...
+2025-04-06 22:19:15,053 - INFO - 
+--- Iteration 1 ---
+2025-04-06 22:19:15,053 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:15,054 - INFO - Starting LLM generation...
+2025-04-06 22:19:15,055 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:15,057 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-06 22:19:15,073 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000029234779A90>
+2025-04-06 22:19:15,075 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x00000292346975C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-06 22:19:15,132 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000292347A02D0>
+2025-04-06 22:19:15,133 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:15,134 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:15,134 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:15,135 - DEBUG - send_request_body.complete
+2025-04-06 22:19:15,135 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:16,875 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:15 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1731'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:16,877 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:16,877 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:16,878 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:16,878 - DEBUG - response_closed.started
+2025-04-06 22:19:16,879 - DEBUG - response_closed.complete
+2025-04-06 22:19:16,880 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:16,880 - INFO - LLM generation completed
+2025-04-06 22:19:16,881 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|ASWATHI
+2025-04-06 22:19:16,881 - INFO - 
+Raw function info:  strings_to_chars_to_int|ASWATHI
+2025-04-06 22:19:16,882 - INFO - Split parts: ['strings_to_chars_to_int', 'ASWATHI']
+2025-04-06 22:19:16,882 - INFO - Function name: strings_to_chars_to_int
+2025-04-06 22:19:16,882 - INFO - Raw parameters: ['ASWATHI']
+2025-04-06 22:19:16,883 - INFO - Found tool: strings_to_chars_to_int
+2025-04-06 22:19:16,883 - INFO - Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-06 22:19:16,883 - INFO - Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-06 22:19:16,884 - INFO - Converting parameter string with value ASWATHI to type string
+2025-04-06 22:19:16,886 - INFO - Final arguments: {'string': 'ASWATHI'}
+2025-04-06 22:19:16,887 - INFO - Calling tool strings_to_chars_to_int
+2025-04-06 22:19:16,891 - INFO - Raw result: meta=None content=[TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='83', annotations=None), TextContent(type='text', text='87', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='73', annotations=None)] isError=False
+2025-04-06 22:19:16,892 - INFO - Result has content attribute
+2025-04-06 22:19:16,893 - INFO - Final iteration result: ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:19:16,893 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:19:16,894 - INFO - ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:19:16,894 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:19:16,895 - INFO - 
+--- Iteration 2 ---
+2025-04-06 22:19:16,895 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:16,895 - INFO - Starting LLM generation...
+2025-04-06 22:19:16,896 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:16,898 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:16,899 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:16,900 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:16,900 - DEBUG - send_request_body.complete
+2025-04-06 22:19:16,901 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:17,696 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:16 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=787'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:17,697 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:17,698 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:17,699 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:17,699 - DEBUG - response_closed.started
+2025-04-06 22:19:17,700 - DEBUG - response_closed.complete
+2025-04-06 22:19:17,701 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:17,701 - INFO - LLM generation completed
+2025-04-06 22:19:17,702 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|65,83,87,65,84,72,73
+2025-04-06 22:19:17,702 - INFO - 
+Raw function info:  int_list_to_exponential_sum|65,83,87,65,84,72,73
+2025-04-06 22:19:17,703 - INFO - Split parts: ['int_list_to_exponential_sum', '65,83,87,65,84,72,73']
+2025-04-06 22:19:17,703 - INFO - Function name: int_list_to_exponential_sum
+2025-04-06 22:19:17,703 - INFO - Raw parameters: ['65,83,87,65,84,72,73']
+2025-04-06 22:19:17,704 - INFO - Found tool: int_list_to_exponential_sum
+2025-04-06 22:19:17,704 - INFO - Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-06 22:19:17,704 - INFO - Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-06 22:19:17,705 - INFO - Converting parameter int_list with value 65,83,87,65,84,72,73 to type array
+2025-04-06 22:19:17,705 - INFO - Final arguments: {'int_list': [65, 83, 87, 65, 84, 72, 73]}
+2025-04-06 22:19:17,705 - INFO - Calling tool int_list_to_exponential_sum
+2025-04-06 22:19:17,711 - INFO - Raw result: meta=None content=[TextContent(type='text', text='6.489831247211316e+37', annotations=None)] isError=False
+2025-04-06 22:19:17,711 - INFO - Result has content attribute
+2025-04-06 22:19:17,712 - INFO - Final iteration result: ['6.489831247211316e+37']
+2025-04-06 22:19:17,712 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:19:17,713 - INFO - ['6.489831247211316e+37']
+2025-04-06 22:19:17,713 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:19:17,714 - INFO - 
+--- Iteration 3 ---
+2025-04-06 22:19:17,714 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:17,714 - INFO - Starting LLM generation...
+2025-04-06 22:19:17,715 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:17,716 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:17,717 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:17,717 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:17,718 - DEBUG - send_request_body.complete
+2025-04-06 22:19:17,718 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:18,692 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:17 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=955'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:18,694 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:18,695 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:18,695 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:18,696 - DEBUG - response_closed.started
+2025-04-06 22:19:18,696 - DEBUG - response_closed.complete
+2025-04-06 22:19:18,697 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:18,697 - INFO - LLM generation completed
+2025-04-06 22:19:18,698 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-06 22:19:18,699 - INFO - 
+Raw function info:  open_paint
+2025-04-06 22:19:18,699 - INFO - Split parts: ['open_paint']
+2025-04-06 22:19:18,700 - INFO - Function name: open_paint
+2025-04-06 22:19:18,700 - INFO - Raw parameters: []
+2025-04-06 22:19:18,700 - INFO - Found tool: open_paint
+2025-04-06 22:19:18,701 - INFO - Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-06 22:19:18,701 - INFO - Schema properties: {}
+2025-04-06 22:19:18,701 - INFO - Final arguments: {}
+2025-04-06 22:19:18,701 - INFO - Calling tool open_paint
+2025-04-06 22:19:19,209 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:19:19,210 - INFO - Result has content attribute
+2025-04-06 22:19:19,211 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:19:19,212 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:19:19,212 - INFO - ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:19:19,213 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:19:19,214 - INFO - 
+--- Iteration 4 ---
+2025-04-06 22:19:19,214 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:19,215 - INFO - Starting LLM generation...
+2025-04-06 22:19:19,215 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:19,216 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:19,217 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:19,217 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:19,218 - DEBUG - send_request_body.complete
+2025-04-06 22:19:19,218 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:19,915 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:18 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=688'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:19,917 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:19,918 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:19,918 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:19,919 - DEBUG - response_closed.started
+2025-04-06 22:19:19,919 - DEBUG - response_closed.complete
+2025-04-06 22:19:19,921 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:19,924 - INFO - LLM generation completed
+2025-04-06 22:19:19,924 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|450|300|750|600
+2025-04-06 22:19:19,925 - INFO - 
+Raw function info:  draw_rectangle|450|300|750|600
+2025-04-06 22:19:19,925 - INFO - Split parts: ['draw_rectangle', '450', '300', '750', '600']
+2025-04-06 22:19:19,926 - INFO - Function name: draw_rectangle
+2025-04-06 22:19:19,926 - INFO - Raw parameters: ['450', '300', '750', '600']
+2025-04-06 22:19:19,926 - INFO - Found tool: draw_rectangle
+2025-04-06 22:19:19,926 - INFO - Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-06 22:19:19,927 - INFO - Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-06 22:19:19,927 - INFO - Converting parameter x1 with value 450 to type integer
+2025-04-06 22:19:19,928 - INFO - Converting parameter y1 with value 300 to type integer
+2025-04-06 22:19:19,928 - INFO - Converting parameter x2 with value 750 to type integer
+2025-04-06 22:19:19,928 - INFO - Converting parameter y2 with value 600 to type integer
+2025-04-06 22:19:19,928 - INFO - Final arguments: {'x1': 450, 'y1': 300, 'x2': 750, 'y2': 600}
+2025-04-06 22:19:19,929 - INFO - Calling tool draw_rectangle
+2025-04-06 22:19:21,397 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:19:21,398 - INFO - Result has content attribute
+2025-04-06 22:19:21,399 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:19:21,399 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:19:21,400 - INFO - ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:19:21,401 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:19:21,401 - INFO - 
+--- Iteration 5 ---
+2025-04-06 22:19:21,402 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:21,402 - INFO - Starting LLM generation...
+2025-04-06 22:19:21,403 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:21,404 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:21,405 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:21,405 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:21,406 - DEBUG - send_request_body.complete
+2025-04-06 22:19:21,406 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:22,152 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:21 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=735'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:22,153 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:22,154 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:22,155 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:22,155 - DEBUG - response_closed.started
+2025-04-06 22:19:22,155 - DEBUG - response_closed.complete
+2025-04-06 22:19:22,156 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:22,157 - INFO - LLM generation completed
+2025-04-06 22:19:22,157 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:19:22,157 - INFO - 
+Raw function info:  add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:19:22,158 - INFO - Split parts: ['add_text_in_paint', '6.489831247211316e+37', '500', '400']
+2025-04-06 22:19:22,158 - INFO - Function name: add_text_in_paint
+2025-04-06 22:19:22,158 - INFO - Raw parameters: ['6.489831247211316e+37', '500', '400']
+2025-04-06 22:19:22,159 - INFO - Found tool: add_text_in_paint
+2025-04-06 22:19:22,159 - INFO - Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}, 'required': ['text', 'x_text', 'y_text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-06 22:19:22,159 - INFO - Schema properties: {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}
+2025-04-06 22:19:22,160 - INFO - Converting parameter text with value 6.489831247211316e+37 to type string
+2025-04-06 22:19:22,160 - INFO - Converting parameter x_text with value 500 to type integer
+2025-04-06 22:19:22,160 - INFO - Converting parameter y_text with value 400 to type integer
+2025-04-06 22:19:22,160 - INFO - Final arguments: {'text': '6.489831247211316e+37', 'x_text': 500, 'y_text': 400}
+2025-04-06 22:19:22,160 - INFO - Calling tool add_text_in_paint
+2025-04-06 22:19:24,828 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:19:24,829 - INFO - Result has content attribute
+2025-04-06 22:19:24,829 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:19:24,829 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:19:24,830 - INFO - ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:19:24,830 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:19:24,830 - INFO - 
+--- Iteration 6 ---
+2025-04-06 22:19:24,830 - INFO - Preparing to generate LLM response...
+2025-04-06 22:19:24,831 - INFO - Starting LLM generation...
+2025-04-06 22:19:24,831 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:19:24,832 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:24,832 - DEBUG - send_request_headers.complete
+2025-04-06 22:19:24,832 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:19:24,833 - DEBUG - send_request_body.complete
+2025-04-06 22:19:24,833 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:19:25,544 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:49:24 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=700'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:19:25,546 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:19:25,546 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:19:25,547 - DEBUG - receive_response_body.complete
+2025-04-06 22:19:25,548 - DEBUG - response_closed.started
+2025-04-06 22:19:25,548 - DEBUG - response_closed.complete
+2025-04-06 22:19:25,549 - INFO - AFC remote call 1 is done.
+2025-04-06 22:19:25,549 - INFO - LLM generation completed
+2025-04-06 22:19:25,550 - INFO - LLM Response: FINAL_ANSWER: [6.489831247211316e+37]
+2025-04-06 22:19:25,550 - INFO - 
+##### Iterations Finished! #####
+
+2025-04-06 22:19:25,551 - INFO - 
+=== Agent Execution Complete ===
+2025-04-06 22:19:25,692 - DEBUG - close.started
+2025-04-06 22:19:25,693 - DEBUG - close.complete
+2025-04-06 22:20:34,054 - DEBUG - Using proactor: IocpProactor
+2025-04-06 22:20:34,055 - INFO - Starting main execution...
+2025-04-06 22:20:34,056 - INFO - Establishing connection to MCP server...
+2025-04-06 22:20:34,068 - INFO - Connection established, creating session...
+2025-04-06 22:20:34,069 - INFO - Session created, initializing...
+2025-04-06 22:20:35,051 - INFO - Requesting tool list...
+2025-04-06 22:20:35,055 - INFO - Successfully retrieved 22 tools
+2025-04-06 22:20:35,055 - INFO - Creating system prompt...
+2025-04-06 22:20:35,055 - INFO - Number of tools: 22
+2025-04-06 22:20:35,055 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-06 22:20:35,055 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-06 22:20:35,056 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-06 22:20:35,056 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-06 22:20:35,056 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-06 22:20:35,057 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-06 22:20:35,057 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-06 22:20:35,058 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-06 22:20:35,058 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-06 22:20:35,059 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-06 22:20:35,059 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-06 22:20:35,059 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-06 22:20:35,060 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-06 22:20:35,060 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-06 22:20:35,060 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-06 22:20:35,060 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-06 22:20:35,061 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-06 22:20:35,061 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-06 22:20:35,061 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-06 22:20:35,061 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-06 22:20:35,062 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-06 22:20:35,062 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-06 22:20:35,062 - INFO - Successfully created tools description
+2025-04-06 22:20:35,063 - INFO - Created system prompt...
+2025-04-06 22:20:35,063 - INFO - Starting iteration loop...
+2025-04-06 22:20:35,063 - INFO - 
+--- Iteration 1 ---
+2025-04-06 22:20:35,066 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:35,067 - INFO - Starting LLM generation...
+2025-04-06 22:20:35,068 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:35,071 - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=None socket_options=None
+2025-04-06 22:20:35,091 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015A2FCC9A90>
+2025-04-06 22:20:35,092 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000015A2FBE75C0> server_hostname='generativelanguage.googleapis.com' timeout=None
+2025-04-06 22:20:35,136 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000015A2FCF02D0>
+2025-04-06 22:20:35,137 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:35,138 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:35,138 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:35,138 - DEBUG - send_request_body.complete
+2025-04-06 22:20:35,139 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:36,959 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:35 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=1811'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:36,963 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:36,964 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:36,965 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:36,965 - DEBUG - response_closed.started
+2025-04-06 22:20:36,966 - DEBUG - response_closed.complete
+2025-04-06 22:20:36,967 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:36,967 - INFO - LLM generation completed
+2025-04-06 22:20:36,968 - INFO - LLM Response: FUNCTION_CALL: strings_to_chars_to_int|ASWATHI
+2025-04-06 22:20:36,968 - INFO - 
+Raw function info:  strings_to_chars_to_int|ASWATHI
+2025-04-06 22:20:36,968 - INFO - Split parts: ['strings_to_chars_to_int', 'ASWATHI']
+2025-04-06 22:20:36,969 - INFO - Function name: strings_to_chars_to_int
+2025-04-06 22:20:36,969 - INFO - Raw parameters: ['ASWATHI']
+2025-04-06 22:20:36,969 - INFO - Found tool: strings_to_chars_to_int
+2025-04-06 22:20:36,970 - INFO - Tool schema: {'properties': {'string': {'title': 'String', 'type': 'string'}}, 'required': ['string'], 'title': 'strings_to_chars_to_intArguments', 'type': 'object'}
+2025-04-06 22:20:36,970 - INFO - Schema properties: {'string': {'title': 'String', 'type': 'string'}}
+2025-04-06 22:20:36,970 - INFO - Converting parameter string with value ASWATHI to type string
+2025-04-06 22:20:36,971 - INFO - Final arguments: {'string': 'ASWATHI'}
+2025-04-06 22:20:36,971 - INFO - Calling tool strings_to_chars_to_int
+2025-04-06 22:20:36,976 - INFO - Raw result: meta=None content=[TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='83', annotations=None), TextContent(type='text', text='87', annotations=None), TextContent(type='text', text='65', annotations=None), TextContent(type='text', text='84', annotations=None), TextContent(type='text', text='72', annotations=None), TextContent(type='text', text='73', annotations=None)] isError=False
+2025-04-06 22:20:36,977 - INFO - Result has content attribute
+2025-04-06 22:20:36,977 - INFO - Final iteration result: ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:20:36,978 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:20:36,978 - INFO - ['65', '83', '87', '65', '84', '72', '73']
+2025-04-06 22:20:36,978 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:20:36,979 - INFO - 
+--- Iteration 2 ---
+2025-04-06 22:20:36,979 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:36,979 - INFO - Starting LLM generation...
+2025-04-06 22:20:36,980 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:36,982 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:36,983 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:36,984 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:36,984 - DEBUG - send_request_body.complete
+2025-04-06 22:20:36,984 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:37,733 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:36 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=741'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:37,735 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:37,735 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:37,736 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:37,736 - DEBUG - response_closed.started
+2025-04-06 22:20:37,737 - DEBUG - response_closed.complete
+2025-04-06 22:20:37,738 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:37,738 - INFO - LLM generation completed
+2025-04-06 22:20:37,739 - INFO - LLM Response: FUNCTION_CALL: int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:20:37,739 - INFO - 
+Raw function info:  int_list_to_exponential_sum|[65, 83, 87, 65, 84, 72, 73]
+2025-04-06 22:20:37,740 - INFO - Split parts: ['int_list_to_exponential_sum', '[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:20:37,740 - INFO - Function name: int_list_to_exponential_sum
+2025-04-06 22:20:37,740 - INFO - Raw parameters: ['[65, 83, 87, 65, 84, 72, 73]']
+2025-04-06 22:20:37,740 - INFO - Found tool: int_list_to_exponential_sum
+2025-04-06 22:20:37,741 - INFO - Tool schema: {'properties': {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}, 'required': ['int_list'], 'title': 'int_list_to_exponential_sumArguments', 'type': 'object'}
+2025-04-06 22:20:37,741 - INFO - Schema properties: {'int_list': {'items': {}, 'title': 'Int List', 'type': 'array'}}
+2025-04-06 22:20:37,741 - INFO - Converting parameter int_list with value [65, 83, 87, 65, 84, 72, 73] to type array
+2025-04-06 22:20:37,742 - INFO - Final arguments: {'int_list': [65, 83, 87, 65, 84, 72, 73]}
+2025-04-06 22:20:37,742 - INFO - Calling tool int_list_to_exponential_sum
+2025-04-06 22:20:37,744 - INFO - Raw result: meta=None content=[TextContent(type='text', text='6.489831247211316e+37', annotations=None)] isError=False
+2025-04-06 22:20:37,745 - INFO - Result has content attribute
+2025-04-06 22:20:37,745 - INFO - Final iteration result: ['6.489831247211316e+37']
+2025-04-06 22:20:37,746 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:20:37,746 - INFO - ['6.489831247211316e+37']
+2025-04-06 22:20:37,746 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:20:37,747 - INFO - 
+--- Iteration 3 ---
+2025-04-06 22:20:37,747 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:37,748 - INFO - Starting LLM generation...
+2025-04-06 22:20:37,748 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:37,749 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:37,750 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:37,750 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:37,750 - DEBUG - send_request_body.complete
+2025-04-06 22:20:37,751 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:38,743 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:37 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=984'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:38,744 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:38,745 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:38,746 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:38,747 - DEBUG - response_closed.started
+2025-04-06 22:20:38,747 - DEBUG - response_closed.complete
+2025-04-06 22:20:38,748 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:38,749 - INFO - LLM generation completed
+2025-04-06 22:20:38,749 - INFO - LLM Response: FUNCTION_CALL: open_paint
+2025-04-06 22:20:38,750 - INFO - 
+Raw function info:  open_paint
+2025-04-06 22:20:38,750 - INFO - Split parts: ['open_paint']
+2025-04-06 22:20:38,750 - INFO - Function name: open_paint
+2025-04-06 22:20:38,750 - INFO - Raw parameters: []
+2025-04-06 22:20:38,751 - INFO - Found tool: open_paint
+2025-04-06 22:20:38,751 - INFO - Tool schema: {'properties': {}, 'title': 'open_paintArguments', 'type': 'object'}
+2025-04-06 22:20:38,751 - INFO - Schema properties: {}
+2025-04-06 22:20:38,751 - INFO - Final arguments: {}
+2025-04-06 22:20:38,751 - INFO - Calling tool open_paint
+2025-04-06 22:20:39,272 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:20:39,273 - INFO - Result has content attribute
+2025-04-06 22:20:39,273 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:20:39,274 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:20:39,274 - INFO - ['{"content": [{"type": "text", "text": "Paint opened successfully on secondary monitor and maximized", "annotations": null}]}']
+2025-04-06 22:20:39,274 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:20:39,275 - INFO - 
+--- Iteration 4 ---
+2025-04-06 22:20:39,275 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:39,276 - INFO - Starting LLM generation...
+2025-04-06 22:20:39,276 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:39,277 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:39,278 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:39,278 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:39,279 - DEBUG - send_request_body.complete
+2025-04-06 22:20:39,279 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:39,961 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:38 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=674'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:39,962 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:39,963 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:39,963 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:39,964 - DEBUG - response_closed.started
+2025-04-06 22:20:39,964 - DEBUG - response_closed.complete
+2025-04-06 22:20:39,965 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:39,966 - INFO - LLM generation completed
+2025-04-06 22:20:39,966 - INFO - LLM Response: FUNCTION_CALL: draw_rectangle|450|300|750|600
+2025-04-06 22:20:39,967 - INFO - 
+Raw function info:  draw_rectangle|450|300|750|600
+2025-04-06 22:20:39,967 - INFO - Split parts: ['draw_rectangle', '450', '300', '750', '600']
+2025-04-06 22:20:39,968 - INFO - Function name: draw_rectangle
+2025-04-06 22:20:39,968 - INFO - Raw parameters: ['450', '300', '750', '600']
+2025-04-06 22:20:39,968 - INFO - Found tool: draw_rectangle
+2025-04-06 22:20:39,969 - INFO - Tool schema: {'properties': {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}, 'required': ['x1', 'y1', 'x2', 'y2'], 'title': 'draw_rectangleArguments', 'type': 'object'}
+2025-04-06 22:20:39,969 - INFO - Schema properties: {'x1': {'title': 'X1', 'type': 'integer'}, 'y1': {'title': 'Y1', 'type': 'integer'}, 'x2': {'title': 'X2', 'type': 'integer'}, 'y2': {'title': 'Y2', 'type': 'integer'}}
+2025-04-06 22:20:39,969 - INFO - Converting parameter x1 with value 450 to type integer
+2025-04-06 22:20:39,970 - INFO - Converting parameter y1 with value 300 to type integer
+2025-04-06 22:20:39,970 - INFO - Converting parameter x2 with value 750 to type integer
+2025-04-06 22:20:39,970 - INFO - Converting parameter y2 with value 600 to type integer
+2025-04-06 22:20:39,971 - INFO - Final arguments: {'x1': 450, 'y1': 300, 'x2': 750, 'y2': 600}
+2025-04-06 22:20:39,971 - INFO - Calling tool draw_rectangle
+2025-04-06 22:20:41,430 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:20:41,431 - INFO - Result has content attribute
+2025-04-06 22:20:41,432 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:20:41,432 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:20:41,433 - INFO - ['{"content": [{"type": "text", "text": "Rectangle drawn from (450,300) to (750,600)", "annotations": null}]}']
+2025-04-06 22:20:41,433 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:20:41,434 - INFO - 
+--- Iteration 5 ---
+2025-04-06 22:20:41,434 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:41,435 - INFO - Starting LLM generation...
+2025-04-06 22:20:41,435 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:41,437 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:41,438 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:41,438 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:41,438 - DEBUG - send_request_body.complete
+2025-04-06 22:20:41,439 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:42,184 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:41 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=738'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:42,185 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:42,186 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:42,187 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:42,187 - DEBUG - response_closed.started
+2025-04-06 22:20:42,187 - DEBUG - response_closed.complete
+2025-04-06 22:20:42,188 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:42,189 - INFO - LLM generation completed
+2025-04-06 22:20:42,189 - INFO - LLM Response: FUNCTION_CALL: add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:20:42,189 - INFO - 
+Raw function info:  add_text_in_paint|6.489831247211316e+37|500|400
+2025-04-06 22:20:42,190 - INFO - Split parts: ['add_text_in_paint', '6.489831247211316e+37', '500', '400']
+2025-04-06 22:20:42,190 - INFO - Function name: add_text_in_paint
+2025-04-06 22:20:42,190 - INFO - Raw parameters: ['6.489831247211316e+37', '500', '400']
+2025-04-06 22:20:42,190 - INFO - Found tool: add_text_in_paint
+2025-04-06 22:20:42,191 - INFO - Tool schema: {'properties': {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}, 'required': ['text', 'x_text', 'y_text'], 'title': 'add_text_in_paintArguments', 'type': 'object'}
+2025-04-06 22:20:42,191 - INFO - Schema properties: {'text': {'title': 'Text', 'type': 'string'}, 'x_text': {'title': 'X Text', 'type': 'integer'}, 'y_text': {'title': 'Y Text', 'type': 'integer'}}
+2025-04-06 22:20:42,191 - INFO - Converting parameter text with value 6.489831247211316e+37 to type string
+2025-04-06 22:20:42,192 - INFO - Converting parameter x_text with value 500 to type integer
+2025-04-06 22:20:42,192 - INFO - Converting parameter y_text with value 400 to type integer
+2025-04-06 22:20:42,192 - INFO - Final arguments: {'text': '6.489831247211316e+37', 'x_text': 500, 'y_text': 400}
+2025-04-06 22:20:42,193 - INFO - Calling tool add_text_in_paint
+2025-04-06 22:20:44,868 - INFO - Raw result: meta=None content=[TextContent(type='text', text='{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}', annotations=None)] isError=False
+2025-04-06 22:20:44,869 - INFO - Result has content attribute
+2025-04-06 22:20:44,869 - INFO - Final iteration result: ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:20:44,870 - INFO - 
+
+~~ Current iteration response ~~
+2025-04-06 22:20:44,870 - INFO - ['{"content": [{"type": "text", "text": "Text:\'6.489831247211316e+37\' added successfully", "annotations": null}]}']
+2025-04-06 22:20:44,870 - INFO - 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-04-06 22:20:44,871 - INFO - 
+--- Iteration 6 ---
+2025-04-06 22:20:44,871 - INFO - Preparing to generate LLM response...
+2025-04-06 22:20:44,871 - INFO - Starting LLM generation...
+2025-04-06 22:20:44,871 - INFO - AFC is enabled with max remote calls: 10.
+2025-04-06 22:20:44,872 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:44,873 - DEBUG - send_request_headers.complete
+2025-04-06 22:20:44,873 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-06 22:20:44,873 - DEBUG - send_request_body.complete
+2025-04-06 22:20:44,873 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-06 22:20:45,684 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Sun, 06 Apr 2025 16:50:44 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=801'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-04-06 22:20:45,688 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-04-06 22:20:45,688 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-06 22:20:45,689 - DEBUG - receive_response_body.complete
+2025-04-06 22:20:45,689 - DEBUG - response_closed.started
+2025-04-06 22:20:45,690 - DEBUG - response_closed.complete
+2025-04-06 22:20:45,691 - INFO - AFC remote call 1 is done.
+2025-04-06 22:20:45,692 - INFO - LLM generation completed
+2025-04-06 22:20:45,692 - INFO - LLM Response: FINAL_ANSWER: [Done]
+2025-04-06 22:20:45,693 - INFO - 
+##### Iterations Finished! #####
+
+2025-04-06 22:20:45,694 - INFO - 
+=== Agent Execution Complete ===
+2025-04-06 22:20:45,837 - DEBUG - close.started
+2025-04-06 22:20:45,839 - DEBUG - close.complete
+2025-04-20 17:00:51,701 - DEBUG - Using proactor: IocpProactor
+2025-04-20 17:00:51,703 - INFO - Starting main execution...
+2025-04-20 17:00:51,704 - INFO - Establishing connection to MCP server...
+2025-04-20 17:00:51,719 - INFO - Connection established, creating session...
+2025-04-20 17:00:51,719 - INFO - Session created, initializing...
+2025-04-20 17:00:53,293 - INFO - Requesting tool list...
+2025-04-20 17:00:53,296 - INFO - Successfully retrieved 22 tools
+2025-04-20 17:00:53,297 - INFO - Creating system prompt...
+2025-04-20 17:00:53,297 - INFO - Number of tools: 22
+2025-04-20 17:00:53,297 - INFO - Added description for tool: 1. add(a: integer, b: integer) - Add two numbers
+2025-04-20 17:00:53,297 - INFO - Added description for tool: 2. add_list(l: array) - Add all numbers in a list
+2025-04-20 17:00:53,297 - INFO - Added description for tool: 3. subtract(a: integer, b: integer) - Subtract two numbers
+2025-04-20 17:00:53,298 - INFO - Added description for tool: 4. multiply(a: integer, b: integer) - Multiply two numbers
+2025-04-20 17:00:53,298 - INFO - Added description for tool: 5. divide(a: integer, b: integer) - Divide two numbers
+2025-04-20 17:00:53,298 - INFO - Added description for tool: 6. power(a: integer, b: integer) - Power of two numbers
+2025-04-20 17:00:53,298 - INFO - Added description for tool: 7. sqrt(a: integer) - Square root of a number
+2025-04-20 17:00:53,298 - INFO - Added description for tool: 8. cbrt(a: integer) - Cube root of a number
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 9. factorial(a: integer) - factorial of a number
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 10. log(a: integer) - log of a number
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 11. remainder(a: integer, b: integer) - remainder of two numbers divison
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 12. sin(a: integer) - sin of a number
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 13. cos(a: integer) - cos of a number
+2025-04-20 17:00:53,299 - INFO - Added description for tool: 14. tan(a: integer) - tan of a number
+2025-04-20 17:00:53,300 - INFO - Added description for tool: 15. mine(a: integer, b: integer) - special mining tool
+2025-04-20 17:00:53,300 - INFO - Added description for tool: 16. create_thumbnail(image_path: string) - Create a thumbnail from an image
+2025-04-20 17:00:53,300 - INFO - Added description for tool: 17. strings_to_chars_to_int(string: string) - Return the ASCII values of the characters in a word
+2025-04-20 17:00:53,300 - INFO - Added description for tool: 18. int_list_to_exponential_sum(int_list: array) - Return sum of exponentials of numbers in a list
+2025-04-20 17:00:53,300 - INFO - Added description for tool: 19. fibonacci_numbers(n: integer) - Return the first n Fibonacci Numbers
+2025-04-20 17:00:53,301 - INFO - Added description for tool: 20. draw_rectangle(x1: integer, y1: integer, x2: integer, y2: integer) - Draw a rectangle in Paint from (x1,y1) to (x2,y2)
+2025-04-20 17:00:53,301 - INFO - Added description for tool: 21. add_text_in_paint(text: string, x_text: integer, y_text: integer) - Add text in Paint
+2025-04-20 17:00:53,302 - INFO - Added description for tool: 22. open_paint() - Open Microsoft Paint maximized on monitor
+2025-04-20 17:00:53,302 - INFO - Successfully created tools description
+2025-04-20 17:00:53,302 - INFO - Created system prompt...
+2025-04-20 17:00:53,303 - INFO - Starting iteration loop...
+2025-04-20 17:00:53,303 - INFO - 
+--- Iteration 1 ---
+2025-04-20 17:00:53,303 - INFO - Preparing to generate LLM response...
